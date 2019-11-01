@@ -38,23 +38,25 @@ public class OrderAssembly {
   public String setLevelThe(String path) {
     List<Assembly> lstTotal = mgrAssembly.getAssemblies();
     int total = lstTotal.size();
-    int div = total / 2;    
+    int div = total / 2;
 
     Runnable action = () -> {
       AssemblyController ass1 = mgrAssembly;
       List<Assembly> lstUno = lstTotal.subList(0, div);
-      
-      Map<String, Integer> assemblyLevels = ass1.assemblyLevels(lstUno);      
+
+      @SuppressWarnings("unused")
+      Map<String, Integer> assemblyLevels = ass1.assemblyLevels(lstUno);
     };
 
     Thread t = new Thread(action);
     t.start();
-    
+
     Runnable action2 = () -> {
       AssemblyController ass1 = mgrAssembly;
       List<Assembly> lstUno = lstTotal.subList(div, total);
-      
-      Map<String, Integer> assemblyLevels = ass1.assemblyLevels(lstUno);      
+
+      @SuppressWarnings("unused")
+      Map<String, Integer> assemblyLevels = ass1.assemblyLevels(lstUno);
     };
 
     Thread t2 = new Thread(action2);

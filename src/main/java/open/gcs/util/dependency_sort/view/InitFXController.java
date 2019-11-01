@@ -2,25 +2,23 @@ package open.gcs.util.dependency_sort.view;
 
 import java.io.File;
 import java.io.IOException;
-import javafx.stage.Window;
-import open.gcs.util.dependency_sort.service.OrderAssembly;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.event.ActionEvent;
-import java.util.Optional;
-import java.util.ResourceBundle;
-import java.net.URL;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.fxml.Initializable;
+import javafx.stage.Window;
 
 public class InitFXController implements Initializable {
 
